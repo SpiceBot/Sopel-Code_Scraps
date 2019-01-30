@@ -35,7 +35,7 @@ def bot_startup_errors(bot, trigger):
     debuglines = []
     for line in os.popen(str("sudo journalctl _PID=" + str(servicepid))).read().split('\n'):
         if not str(line).startswith("-- Logs begin at"):
-            line = str(line).split("Spicebot-sopel-SpiceBot ")[-1]
+            line = str(line).split(str(os.uname()[1] + " "))[-1]
             if not str(line).startswith("sudo"):
                 lineparts = str(line).split(": ")
                 del lineparts[0]
