@@ -17,8 +17,6 @@ sys.setdefaultencoding('utf-8')
 
 
 """
-This is triggered after The bots startup monlogue is completed
-
 This prompts bot admins to run the debug command for information regarding errors during startup (if any)
 """
 
